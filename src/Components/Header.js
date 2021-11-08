@@ -1,31 +1,37 @@
-import { Box } from "@mui/system";
 import React from "react";
 // import Stories from "react-insta-stories";
-import IconButton from "./IconButton";
 import imgUrls from "../Assets/story-mocks";
-import Stories from "./Stories";
+import styled from "styled-components";
+import Story from "./Story";
+
+const HideScrollbarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
 
 export default function Header() {
   //   const storiesOpened = false;
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        overflowX: "scroll",
-        paddingLeft: "3px",
-        flexWrap: "nowrap",
-      }}
-    >
-      <IconButton icon="add" />
-      <Stories imgUrls={imgUrls} />
+    <HideScrollbarWrapper>
+      <Story />
+      {imgUrls.map((url) => (
+        <Story imgUrl={url} />
+      ))}
       {/* <Stories
-        stories={imgUrls}
-        defaultInterval={1500}
-        width={"100vw"}
-        height={"100vh"}
-      /> */}
-    </Box>
+          stories={imgUrls}
+          defaultInterval={1500}
+          width={"100vw"}
+          height={"100vh"}
+        /> */}
+    </HideScrollbarWrapper>
   );
 }
