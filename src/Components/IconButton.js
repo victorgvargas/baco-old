@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "@mui/material/Icon";
 import Button from "@mui/material/Button";
 import Palette from "../Themes/Palette";
+import PropTypes from "prop-types";
 
 export default function IconButton({ icon }) {
   return (
@@ -19,3 +20,7 @@ export default function IconButton({ icon }) {
     </Palette>
   );
 }
+
+IconButton.propTypes = {
+  icon: PropTypes.string,
+};

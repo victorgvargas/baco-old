@@ -1,21 +1,31 @@
 import { Box } from "@mui/system";
 import React from "react";
-import Stories from "react-insta-stories";
+// import Stories from "react-insta-stories";
 import IconButton from "./IconButton";
 import imgUrls from "../Assets/story-mocks";
+import Stories from "./Stories";
 
 export default function Header() {
-  const storiesOpened = false;
+  //   const storiesOpened = false;
 
   return (
-    <Box flexDirection="row" justifyContent="center">
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        overflowX: "scroll",
+        paddingLeft: "3px",
+        flexWrap: "nowrap",
+      }}
+    >
       <IconButton icon="add" />
-      <Stories
+      <Stories imgUrls={imgUrls} />
+      {/* <Stories
         stories={imgUrls}
         defaultInterval={1500}
         width={"100vw"}
         height={"100vh"}
-      />
+      /> */}
     </Box>
   );
 }
