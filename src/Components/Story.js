@@ -6,6 +6,7 @@ import IconButton from "./IconButton";
 const Img = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 `;
 
 export default function Story({ imgUrl }) {
@@ -16,6 +17,7 @@ export default function Story({ imgUrl }) {
     border: 1px solid lightgray;
     border-radius: 5px;
     display: flex;
+    flex: 0 0 auto;
     justify-content: center;
     align-items: center;
     background-color: ${imgUrl ? "none" : "black"}};

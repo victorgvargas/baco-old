@@ -6,9 +6,7 @@ import Story from "./Story";
 
 const HideScrollbarWrapper = styled.div`
   display: flex;
-  align-items: center;
   padding-left: 3px;
-  flex-wrap: nowrap;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
