@@ -1,6 +1,5 @@
 import React from "react";
 // import Stories from "react-insta-stories";
-import imgUrls from "../Assets/story-mocks";
 import styled from "styled-components";
 import Story from "./Story";
 
@@ -15,7 +14,7 @@ const HideScrollbarWrapper = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header({ imgUrls }) {
   // const [storyOpened, setStoryOpened] = useState(false);
 
   return (
