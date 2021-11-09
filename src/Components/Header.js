@@ -16,7 +16,7 @@ const HideScrollbarWrapper = styled.div`
 `;
 
 export default function Header() {
-  //   const storiesOpened = false;
+  // const [storyOpened, setStoryOpened] = useState(false);
 
   return (
     <HideScrollbarWrapper>
@@ -25,11 +25,11 @@ export default function Header() {
         <Story imgUrl={url} />
       ))}
       {/* <Stories
-          stories={imgUrls}
-          defaultInterval={1500}
-          width={"100vw"}
-          height={"100vh"}
-        /> */}
+        stories={imgUrls}
+        defaultInterval={1500}
+        width={"100vw"}
+        height={"100vh"}
+      /> */}
     </HideScrollbarWrapper>
   );
 }
