@@ -6,6 +6,7 @@ import Story from "./Story";
 const HideScrollbarWrapper = styled.div`
   display: flex;
   padding-left: 3px;
+  z-index: 0;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -13,6 +14,11 @@ const HideScrollbarWrapper = styled.div`
     display: none;
   }
 `;
+
+// const Overlay = styled.div`
+//   position: absolute;
+//   z-index: 1;
+// `;
 
 export default function Header({ imgUrls }) {
   // const [storyOpened, setStoryOpened] = useState(false);
@@ -23,12 +29,14 @@ export default function Header({ imgUrls }) {
       {imgUrls.map((url) => (
         <Story imgUrl={url} />
       ))}
-      {/* <Stories
-        stories={imgUrls}
-        defaultInterval={1500}
-        width={"100vw"}
-        height={"100vh"}
-      /> */}
+      {/* <Overlay>
+        <Stories
+          stories={imgUrls}
+          defaultInterval={1500}
+          width={"100vw"}
+          height={"100vh"}
+        />
+      </Overlay> */}
     </HideScrollbarWrapper>
   );
 }
