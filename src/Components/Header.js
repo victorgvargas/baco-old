@@ -26,8 +26,8 @@ export default function Header({ imgUrls }) {
   return (
     <HideScrollbarWrapper>
       <Story />
-      {imgUrls.map((url) => (
-        <Story imgUrl={url} />
+      {imgUrls.map((url, index) => (
+        <Story key={index} imgUrl={url} />
       ))}
       {/* <Overlay>
         <Stories

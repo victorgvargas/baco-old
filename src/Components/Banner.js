@@ -16,8 +16,8 @@ export default function Banner({ imgUrls }) {
   return (
     <Box>
       <Carousel showThumbs={false} showArrows={false}>
-        {imgUrls.map((url) => (
-          <div>
+        {imgUrls.map((url, index) => (
+          <div key={index}>
             <Img src={url} alt="Banner"></Img>
           </div>
         ))}
