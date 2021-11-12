@@ -4,7 +4,7 @@ import Header from './Header';
 
 export default function Layout({children}) {
     return (
-        <Box sx={{border: '1px solid lightgray',borderRadius: '5px', backgroundColor: '#FFFFFF'}}>
+        <Box sx={{borderRadius: '5px', backgroundColor: '#FFFFFF'}}>
             <Header />
             {children}
         </Box>
