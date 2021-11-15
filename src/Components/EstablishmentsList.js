@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import styled from "styled-components";
+import { ListItem, ListItemButton, ListItemSecondaryAction } from "@mui/material";
 
 const GreenStatus = styled.span`
   color: green;
@@ -46,13 +46,20 @@ export default function EstablishmentsList() {
 
   return (
     <List>
-      <ListSubheader>Estabelecimentos</ListSubheader>
+      <ListSubheader sx={{ fontWeight: "bold", color: "#000000" }}>
+        Estabelecimentos
+      </ListSubheader>
       {establishments.map((establishment, index) => (
-        <ListItem key={index} secondaryAction={statusColors[index]}>
-          <ListItemAvatar>
-            <Avatar alt={establishment.name} src={establishment.image} />
-          </ListItemAvatar>
-          <ListItemText primary={establishment.name} />
+        <ListItem key={index}>
+          <ListItemButton>
+            <ListItemAvatar>
+              <Avatar alt={establishment.name} src={establishment.image} />
+            </ListItemAvatar>
+            <ListItemText primary={establishment.name} />
+            <ListItemSecondaryAction>
+              {statusColors[index]}
+            </ListItemSecondaryAction>
+          </ListItemButton>
         </ListItem>
       ))}
     </List>
