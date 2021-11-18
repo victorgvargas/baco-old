@@ -11,8 +11,10 @@ import {
   IconButton,
   ListItemButton,
   ListItemSecondaryAction,
+  Typography,
 } from "@mui/material";
 import Palette from "../Themes/Palette";
+import PriceRange from "./PriceRange";
 
 const GreenStatus = styled.span`
   color: green;
@@ -76,7 +78,14 @@ export default function EstablishmentsList() {
             <ListItemText
               primary={establishment.name}
               primaryTypographyProps={{ variant: "subtitle1" }}
-              secondary={statusColors[index]}
+              secondary={
+                <React.Fragment>
+                  <Typography sx={{ display: "inline" }}>
+                    {statusColors[index]} &nbsp; - &nbsp;
+                  </Typography>
+                  <PriceRange range={establishment.price} />
+                </React.Fragment>
+              }
             />
             <ListItemSecondaryAction>
               <IconButton
