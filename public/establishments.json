@@ -1,7 +1,7 @@
 [
   {
     "name": "Bar do Zé",
-    "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/bar.jpg",
+    "image": "/bar.jpg",
     "status": "Aberto",
     "price": "3",
     "categories": {
@@ -11,29 +11,29 @@
     },
     "nightSchedule": {
       "description": "Show com Jorge e Mateus a partir das 21:00h. Couvert artistico no valor de R$50,00.",
-      "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/backwoods-duo.jpg"
+      "image": "/backwoods-duo.jpg"
     },
     "menuHighlights": [
       {
         "dish": "Lombo Desfiado",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/pulled-pork.jpg",
+        "image": "/pulled-pork.jpg",
         "price": 49.9
       },
       {
         "dish": "Batata Frita",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/french-fries.jpg",
+        "image": "/french-fries.jpg",
         "price": 49.9
       },
       {
         "dish": "Torresmo",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/crackling.jpg",
+        "image": "/crackling.jpg",
         "price": 49.9
       }
     ]
   },
   {
     "name": "Bar do Zé",
-    "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/bar.jpg",
+    "image": "/bar.jpg",
     "status": "Fechado",
     "price": "2",
     "categories": {
@@ -43,29 +43,29 @@
     },
     "nightSchedule": {
       "description": "Show com Jorge e Mateus a partir das 21:00h. Couvert artistico no valor de R$50,00.",
-      "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/backwoods-duo.jpg"
+      "image": "/backwoods-duo.jpg"
     },
     "menuHighlights": [
       {
         "dish": "Lombo Desfiado",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/pulled-pork.jpg",
+        "image": "/pulled-pork.jpg",
         "price": 49.9
       },
       {
         "dish": "Batata Frita",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/french-fries.jpg",
+        "image": "/french-fries.jpg",
         "price": 49.9
       },
       {
         "dish": "Torresmo",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/crackling.jpg",
+        "image": "/crackling.jpg",
         "price": 49.9
       }
     ]
   },
   {
     "name": "Bar do Zé",
-    "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/bar.jpg",
+    "image": "/bar.jpg",
     "status": "Aberto",
     "price": "4",
     "categories": {
@@ -75,22 +75,22 @@
     },
     "nightSchedule": {
       "description": "Show com Jorge e Mateus a partir das 21:00h. Couvert artistico no valor de R$50,00.",
-      "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/backwoods-duo.jpg"
+      "image": "/backwoods-duo.jpg"
     },
     "menuHighlights": [
       {
         "dish": "Lombo Desfiado",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/pulled-pork.jpg",
+        "image": "/pulled-pork.jpg",
         "price": 49.9
       },
       {
         "dish": "Batata Frita",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/french-fries.jpg",
+        "image": "/french-fries.jpg",
         "price": 49.9
       },
       {
         "dish": "Torresmo",
-        "image": "C:/Users/Victor/OneDrive/Documents/React/get-aware/src/Assets/Images/crackling.jpg",
+        "image": "/crackling.jpg",
         "price": 49.9
       }
     ]
