@@ -1,12 +1,14 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { orange } from "@mui/material/colors";
+import { deepPurple } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
-    primary: orange,
+    primary: {
+      main: deepPurple[900],
+    },
     secondary: {
-      main: "#000000",
+      main: "#320b86",
     },
   },
 });

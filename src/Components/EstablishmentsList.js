@@ -5,7 +5,6 @@ import ListSubheader from "@mui/material/ListSubheader";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import styled from "styled-components";
 import {
   Icon,
   IconButton,
@@ -13,6 +12,8 @@ import {
   ListItemSecondaryAction,
   Typography,
 } from "@mui/material";
+import { Box } from "@mui/system";
+import styled from "styled-components";
 import Palette from "../Themes/Palette";
 import PriceRange from "./PriceRange";
 
@@ -68,7 +69,9 @@ export default function EstablishmentsList() {
     <Palette>
       <List>
         <ListSubheader sx={{ fontWeight: "bold", color: "#000000" }}>
-          Estabelecimentos
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography sx={{ display: "inline" }}>Estabelecimentos</Typography>
+          </Box>
         </ListSubheader>
         {establishments.map((establishment, index) => (
           <ListItemButton key={index}>

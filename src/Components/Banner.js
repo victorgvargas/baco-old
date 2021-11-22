@@ -16,18 +16,24 @@ const Box = styled.div`
 export default function Banner({ imgUrls }) {
   return (
     <Box>
-      <Carousel 
-        showThumbs={false} 
-        showArrows={false} 
-        infiniteLoop 
+      <Carousel
+        showThumbs={false}
+        showArrows={false}
+        infiniteLoop
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const style = {
-            margin: '0 1px',
-            backgroundColor: '#000000', 
-            borderRadius: '50%',
-            cursor: 'pointer' 
+            margin: "0 1px",
+            backgroundColor: "#000000",
+            borderRadius: "50%",
+            cursor: "pointer",
           };
-          const activeStyle = isSelected ? {...style, border: '1px solid #e65100', boxShadow: '0 2px 2px #666'} : {...style};
+          const activeStyle = isSelected
+            ? {
+                ...style,
+                border: "1px solid #311b92",
+                boxShadow: "0 2px 2px #666",
+              }
+            : { ...style };
 
           return (
             <span
@@ -39,10 +45,12 @@ export default function Banner({ imgUrls }) {
               role="button"
               tabIndex={0}
               aria-label={`${label} ${index + 1}`}
-            >&emsp;
+            >
+              &emsp;
             </span>
           );
-        }}>
+        }}
+      >
         {imgUrls.map((url, index) => (
           <div key={index}>
             <Img src={url} alt="Banner"></Img>
