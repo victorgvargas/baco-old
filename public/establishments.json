@@ -4,6 +4,10 @@
     "image": "/bar.jpg",
     "status": "Aberto",
     "price": "3",
+    "location": {
+      "latitude": -21.175887,
+      "longitude": -47.810329
+    },
     "categories": {
       "liveMusic": true,
       "musicStyle": "Sertanejo",
@@ -36,6 +40,10 @@
     "image": "/bar.jpg",
     "status": "Fechado",
     "price": "2",
+    "location": {
+      "latitude": -21.175887,
+      "longitude": -47.810329
+    },
     "categories": {
       "liveMusic": true,
       "musicStyle": "Sertanejo",
@@ -68,6 +76,10 @@
     "image": "/bar.jpg",
     "status": "Aberto",
     "price": "4",
+    "location": {
+      "latitude": -21.175887,
+      "longitude": -47.810329
+    },
     "categories": {
       "liveMusic": true,
       "musicStyle": "Sertanejo",

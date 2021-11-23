@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Palette from "../Themes/Palette";
+import PriceRange from "./PriceRange";
 import axios from "axios";
 import List from "@mui/material/List";
 import ListSubheader from "@mui/material/ListSubheader";
@@ -13,9 +15,9 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
+import { getDistance } from "geolib";
 import styled from "styled-components";
-import Palette from "../Themes/Palette";
-import PriceRange from "./PriceRange";
+import PropTypes from "prop-types";
 
 const GreenStatus = styled.span`
   color: green;
@@ -25,7 +27,7 @@ const RedStatus = styled.span`
   color: red;
 `;
 
-export default function EstablishmentsList() {
+export default function EstablishmentsList({ location }) {
   const [establishments, setEstablishments] = useState([]);
   const [statusColors, setStatusColors] = useState([]);
   const [icon, setIcon] = useState([]);
@@ -46,6 +48,14 @@ export default function EstablishmentsList() {
     let icons = [...icon];
     icons[index] = toggleFavIcon(favIcon);
     setIcon(icons);
+  };
+
+  const getUserEstablishmentDistance = (
+    userLocation,
+    establishmentLocation
+  ) => {
+    const distance = getDistance(userLocation, establishmentLocation);
+    return `${distance / 1000}km`;
   };
 
   useEffect(() => {
@@ -87,6 +97,13 @@ export default function EstablishmentsList() {
                     {statusColors[index]} &nbsp; - &nbsp;
                   </Typography>
                   <PriceRange range={establishment.price} />
+                  <Typography sx={{ display: "inline" }}>
+                    &nbsp; - &nbsp;{" "}
+                    {getUserEstablishmentDistance(
+                      location,
+                      establishment.location
+                    )}
+                  </Typography>
                 </React.Fragment>
               }
             />
@@ -106,3 +123,7 @@ export default function EstablishmentsList() {
     </Palette>
   );
 }
+
+EstablishmentsList.propTypes = {
+  location: PropTypes.object,
+};

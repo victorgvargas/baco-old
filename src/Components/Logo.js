@@ -6,7 +6,7 @@ export default function Logo({ width, height }) {
   const Img = styled.img`
     width: ${width}px;
     height: ${height}px;
-    margin: 3px;
+    margin: 5px;
   `;
 
   return <Img src="/icon.svg" />;
