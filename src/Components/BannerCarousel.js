@@ -13,7 +13,7 @@ const Box = styled.div`
   text-align: center;
 `;
 
-export default function Banner({ imgUrls }) {
+export default function BannerCarousel({ imgUrls }) {
   return (
     <Box>
       <Carousel

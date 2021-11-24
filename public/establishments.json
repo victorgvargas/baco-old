@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Bar do Zé",
     "image": "/bar.jpg",
     "status": "Aberto",
@@ -36,6 +37,7 @@
     ]
   },
   {
+    "id": 2,
     "name": "Bar do Zé",
     "image": "/bar.jpg",
     "status": "Fechado",
@@ -72,6 +74,7 @@
     ]
   },
   {
+    "id": 3,
     "name": "Bar do Zé",
     "image": "/bar.jpg",
     "status": "Aberto",
