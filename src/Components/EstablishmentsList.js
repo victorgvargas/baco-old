@@ -18,6 +18,7 @@ import { Box } from "@mui/system";
 import { getDistance } from "geolib";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const GreenStatus = styled.span`
   color: green;
@@ -54,8 +55,10 @@ export default function EstablishmentsList({ location }) {
     userLocation,
     establishmentLocation
   ) => {
-    const distance = getDistance(userLocation, establishmentLocation);
-    return `${distance / 1000}km`;
+    const distance = (
+      getDistance(userLocation, establishmentLocation) / 1000
+    ).toPrecision(2);
+    return `${distance}km`;
   };
 
   useEffect(() => {
@@ -84,7 +87,11 @@ export default function EstablishmentsList({ location }) {
           </Box>
         </ListSubheader>
         {establishments.map((establishment, index) => (
-          <ListItemButton key={index}>
+          <ListItemButton
+            component={Link}
+            to={`/establishment/${establishment.id}`}
+            key={index}
+          >
             <ListItemAvatar>
               <Avatar alt={establishment.name} src={establishment.image} />
             </ListItemAvatar>
@@ -110,9 +117,10 @@ export default function EstablishmentsList({ location }) {
             <ListItemSecondaryAction>
               <IconButton
                 color="primary"
-                onClick={(event) =>
-                  updateFavIcon(index, event.target.firstChild.nodeValue)
-                }
+                onClick={(event) => {
+                  event.preventDefault();
+                  updateFavIcon(index, event.target.firstChild.nodeValue);
+                }}
               >
                 <Icon>{icon[index]}</Icon>
               </IconButton>
