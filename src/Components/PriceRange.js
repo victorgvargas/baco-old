@@ -7,9 +7,9 @@ export default function PriceRange({ range }) {
     <Box display="inline">
       {new Array(5).fill("").map((icon, index) =>
         index < range ? (
-          <Icon fontSize="inherit">attach_money</Icon>
+          <Icon key={index} fontSize="inherit">attach_money</Icon>
         ) : (
-          <Icon fontSize="inherit" sx={{ color: "lightgray" }}>
+          <Icon key={index} fontSize="inherit" sx={{ color: "lightgray" }}>
             attach_money
           </Icon>
         )

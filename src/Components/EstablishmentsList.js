@@ -83,7 +83,7 @@ export default function EstablishmentsList({ location }) {
       <List>
         <ListSubheader sx={{ fontWeight: "bold", color: "#000000" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography sx={{ display: "inline" }}>Estabelecimentos</Typography>
+            <Typography component={'div'} sx={{ display: "inline" }}>Estabelecimentos</Typography>
           </Box>
         </ListSubheader>
         {establishments.map((establishment, index) => (
@@ -99,19 +99,19 @@ export default function EstablishmentsList({ location }) {
               primary={establishment.name}
               primaryTypographyProps={{ variant: "subtitle1" }}
               secondary={
-                <React.Fragment>
-                  <Typography sx={{ display: "inline" }}>
+                <Typography component={'div'}>
+                  <Typography component={'div'} sx={{ display: "inline" }}>
                     {statusColors[index]} &nbsp; - &nbsp;
                   </Typography>
                   <PriceRange range={establishment.price} />
-                  <Typography sx={{ display: "inline" }}>
-                    &nbsp; - &nbsp;{" "}
+                  <Typography component={'div'} sx={{ display: "inline" }}>
+                    &nbsp; - &nbsp;
                     {getUserEstablishmentDistance(
                       location,
                       establishment.location
                     )}
                   </Typography>
-                </React.Fragment>
+                </Typography>
               }
             />
             <ListItemSecondaryAction>
